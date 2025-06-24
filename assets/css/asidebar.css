@@ -1,0 +1,107 @@
+.aside {
+    min-width: 350px;
+    width: 15%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eaeaea;
+    /* background: url('../images/get-in-touch.jpg'); */
+    font-family: inherit;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 999999;
+    width: 0px;
+    height: 100%;
+    min-width: 0px;
+    overflow-y: hidden;
+    transition: 0.35s width ease, 0.35s min-width ease;
+}
+
+@media(max-width:991px) {
+    .aside {
+        overflow-y: scroll;
+    }
+}
+
+.aside .aside-header {
+    background-color: transparent;
+    padding: 1em;
+    padding-left: 0.5em;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.aside .aside-header .menuclose {
+    float: right;
+    cursor: pointer;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: .6;
+    color: var(--sec-color);
+    text-shadow: 0 1px 0 #fff;
+    opacity: 1;
+    border: 1px solid var(--sec-color);
+    border-radius: 50%;
+    padding: 0px 7px 7px 5px;
+}
+
+.aside .aside-header .menuclose:hover {
+    font-weight: 300;
+    color: var(--hover-color);
+    text-shadow: 0 1px 0 #fff;
+    border: 1px solid var(--hover-color);
+    background-color: #ffffff;
+    transform: rotate(180deg);
+    transition: 0.65s ease;
+}
+
+.aside .aside-contents {
+    padding-bottom: 1em;
+}
+
+.aside.in {
+    width: 25%;
+}
+
+.aside-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #000;
+    transition: 0.2s opacity ease;
+    opacity: 0;
+    display: none;
+}
+
+.aside-backdrop.in {
+    display: block;
+    opacity: 0.7;
+}
+
+@media (min-width: 992px) {
+    .aside .aside-contents {
+        display: flex !important;
+        height: 100%;
+        width: 100%;
+    }
+    .nav-tree ul ul {
+        position: fixed;
+        left: auto;
+        right: 300px;
+        margin: 0;
+        width: 330px;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        background: #324779;
+        background: linear-gradient(to right, #324779 0, #385285 43%, #324879 100%, #426095 100%);
+        list-style: none;
+    }
+}
+
+.aside-backdrop.in:hover {
+    cursor: url(../images/icons/close-btn.png) 15 15, default;
+}

@@ -1,0 +1,32 @@
+diff a/application/views/contract_view.php b/application/views/contract_view.php	(rejected hunks)
+@@ -1,19 +1,20 @@
+    <!---======= Starting Page title ========--->
+-    <section class="inner-page-banner contact-page-banner">
+-        <div class="container h-100">
+-            <div class="row h-100">
+-                <div class="col-lg-12 col-md-12 col-sm-12 align-self-center">
+-                    <h1 class="inner-page-title">Contract Vehicles</h1>
+-                </div>
++   <section class="inner-page-banner contact-page-banner">
++    <div class="container h-100">
++        <div class="row h-100">
++            <div class="col-lg-12 col-md-12 col-sm-12 align-self-center">
++                <h1 class="inner-page-title">Contract Vehicles</h1>
+             </div>
+         </div>
+-    </section>
+-    <!---=======  Contract Details Area =========---->
+-    <section class="contract-area">
++    </div>
++</section>
++<!---=======  Contract Details Area =========---->
++<div class="page-content">
++    <section class="section contract-area">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-12 col-md-12 col-sm-12">
+-                <p>RADgov has exhibited a wide, well-evidenced set of capabilities, experience and expertise in offering Information Technology and Staff Augmentation solutions and services to the Federal agencies of the USA. During the 15 years of serving both the government and private clients, we have grown over to possess several Federal and State contract vehicles, making RADgov a trustworthy, totally integrated solutions provider, adept to face and fulfill challenges of quality and time.</p>
++                    <p>RADgov has exhibited a wide, well-evidenced set of capabilities, experience and expertise in offering Information Technology and Staff Augmentation solutions and services to the Federal agencies of the USA. During the 15 years of serving both the government and private clients, we have grown over to possess several Federal and State contract vehicles, making RADgov a trustworthy, totally integrated solutions provider, adept to face and fulfill challenges of quality and time.</p>
+                     <div class="contract-container">
+                         <div class="tabs tabs-style-linemove">
+                             <nav>

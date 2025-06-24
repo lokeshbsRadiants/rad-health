@@ -42,11 +42,27 @@ $clients = [
 ?>
 
 <div class="client-container">
-    <h2 class="client-title">Our Clients</h2>
+    <h2 style="text-align: center; color: var(--main-color);" class="client-title">Our Clients</h2>
     <div class="client-grid">
-        <?php foreach ($clients as $client): ?>
-            <div class="client-box"><?php echo htmlspecialchars($client); ?></div>
-        <?php endforeach; ?>
+   <?php
+$rowIndex = 0;
+foreach ($clients as $index => $client):
+    if ($index % 5 == 0) {
+        // Start of a new row
+        $rowIndex++;
+    }
+
+    // Column position in the row (0 to 3)
+    $colPosition = $index % 5;
+
+    // Reverse pattern every row
+    $isOddRow = $rowIndex % 2 === 1;
+    $class = ($colPosition % 2 === 0) ? ($isOddRow ? 'bg_odd' : 'bg_even') : ($isOddRow ? 'bg_even' : 'bg_odd');
+?>
+    <div class="client-box <?php echo $class; ?>">
+        <?php echo htmlspecialchars($client); ?>
+    </div>
+<?php endforeach; ?>
     </div>
 </div>
 

@@ -144,12 +144,9 @@
                 </div>
             </div> -->
             <div class="col-lg-3 col-md-3 text-lg-left text-md-left text-center service-last">
-                <img src="<?php echo base_url() ?>assets/images/lazyload-icon.gif"
-                    data-src="<?php echo base_url() ?>assets/images/logowithouttagline.png"
-                    alt="radgov-staffing-services" class="img-fluid lazyload service-icon pb-lg-4 pb-md-4 pb-0"
-                    data-aos="zoom-in">
+             
                 <div class="" data-aos="zoom-in">
-                    <h5 class="service-title py-3">RADHealth<sup>+</sup></h5>
+                   
                     <p>Our organization has established partnerships with healthcare facilities and practices
                      throughout the United States,</p>
                     <a href="<?php echo base_url() ?>service-detail/rad-health" id="toggle"

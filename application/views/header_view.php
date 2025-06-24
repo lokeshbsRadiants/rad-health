@@ -34,7 +34,7 @@
     <style>
         .job_btn {
             position: absolute;
-            top: 36px;
+            top: 20px;
             right: 160px;
             z-index: 999;
         }
@@ -54,8 +54,8 @@
                                 <div class="col-lg-2 col-md-6 col-sm-6 col-6">
                                     <div class="text-left">
                                         <a href="<?php echo base_url() ?>home" class="sitelogo">
-                                            <img src="<?php echo base_url() ?>assets/images/radHealthLogo.png" alt="logo"
-                                                class="img-fluid">
+                                            <img src="<?php echo base_url() ?>assets/images/rad-health-logo-v1.png" alt="logo"
+                                                class="img-fluid w-100 blend-logo">
                                         </a>
                                     </div>
                                 </div>

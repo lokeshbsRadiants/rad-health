@@ -103,7 +103,7 @@ class Jobboard extends CI_Controller {
         }
 
 
-        $url = $this->baseURL . "SearchJobsOnFilters?Searchkeywords=" . urlencode($keyword) . "&country=" . urlencode($country) . "&Zipcode=" . urlencode($zipcode) . "&WithinMiles=" . urlencode($miles)."&Groups=" . urlencode("IV - Health Care");
+        $url = $this->baseURL . "SearchJobsOnFilters?Searchkeywords=" . urlencode($keyword) . "&country=" . urlencode($country) . "&Zipcode=" . urlencode($zipcode) . "&WithinMiles=" . urlencode($miles)."&Group=" . urlencode("IV - Health Care");
 
 
 

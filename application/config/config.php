@@ -29,7 +29,8 @@ if (isset($_SERVER['HTTP_HOST'])) {
     $config['base_url'] .= '://' . $_SERVER['HTTP_HOST'];
     $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
 } else {
-    $config['base_url'] = 'http://radgov.localhost:93/';
+  $config['base_url'] = 'http://183.82.47.86:8080/';
+
 }
 
 /*

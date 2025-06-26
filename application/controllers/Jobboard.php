@@ -200,27 +200,8 @@ class Jobboard extends CI_Controller {
                 "JobID" => $jobId,
             ];
     
-            // Add certifications if present
-            $certifications = [];
-            if (isset($_FILES['certifications']) && is_array($_FILES['certifications']['name'])) {
-                foreach ($_FILES['certifications']['name'] as $index => $certFileName) {
-                    $fileTmp = $_FILES['certifications']['tmp_name'][$index]['file'];
-                    $fileName = $_FILES['certifications']['name'][$index]['file'];
-                    $fileSize = $_FILES['certifications']['size'][$index]['file'];
-                    $fileType = $_FILES['certifications']['type'][$index]['file'];
-    
-                    if ($fileSize > 524288) { // 512 KB
-                        $this->session->set_flashdata('error', "Certification file '{$fileName}' exceeds 512KB.");
-                        redirect($_SERVER['HTTP_REFERER']);
-                        return;
-                    }
-    
-                    if ($fileTmp && is_uploaded_file($fileTmp)) {
-                        $certifications["certifications[$index][file]"] = new CURLFile($fileTmp, $fileType, $fileName);
-                        $certifications["cer_certifications[$index][name]"] = $this->input->post("certifications[$index][name]");
-                    }
-                }
-            }
+
+
     
             $url = $this->baseURL . "QuickApplyJobs";
             $ch = curl_init($url);
@@ -233,7 +214,68 @@ class Jobboard extends CI_Controller {
             }
     
             // Merge data and certification uploads
-            curl_setopt($ch, CURLOPT_POSTFIELDS, array_merge($data, $certifications));
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+
+            // ---------------------------------------------------------------------
+// ---------------------------------------------------------------------
+// Add certifications if present — handles multiple certificate files
+// ---------------------------------------------------------------------
+if (isset($_FILES['certifications']['name']) && is_array($_FILES['certifications']['name'])) {
+    foreach ($_FILES['certifications']['name'] as $index => $fields) {
+
+        $fileName = $_FILES['certifications']['name'][$index]['file'];
+        $fileType = $_FILES['certifications']['type'][$index]['file'];
+        $fileTmp  = $_FILES['certifications']['tmp_name'][$index]['file'];
+        $fileSize = $_FILES['certifications']['size'][$index]['file'];
+        $fileErr  = $_FILES['certifications']['error'][$index]['file'];
+
+        // Corresponding certificate name from POST
+        $certName = $_POST['certifications'][$index]['name'] ?? '';
+
+        if ($fileErr === 0 && $fileSize > 0) {
+            $certPayload = [
+                'emailID'         => $email,
+                'JobID'           => $jobId,
+                'CertificateName' => $certName,
+                'FILE'            => new CURLFile($fileTmp, $fileType, $fileName),
+            ];
+
+            $certUrl = $this->baseURL . 'QuickApplyCertificate';
+            $certCh = curl_init($certUrl);
+            curl_setopt_array($certCh, [
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_POST           => true,
+                CURLOPT_POSTFIELDS     => $certPayload,
+            ]);
+
+            $certResponse = curl_exec($certCh);
+            $httpCode     = curl_getinfo($certCh, CURLINFO_HTTP_CODE);
+            $certError    = curl_error($certCh);
+            curl_close($certCh);
+
+            log_message(
+                'debug',
+                sprintf(
+                    "Cert upload (%s - %s) → HTTP %s | cURL error: %s | Response: %s",
+                    $certName,
+                    $fileName,
+                    $httpCode ?: 'N/A',
+                    $certError ?: 'none',
+                    $certResponse ?: 'empty'
+                )
+            );
+
+            if ($certError || $httpCode >= 400) {
+                $this->session->set_flashdata(
+                    'error',
+                    "Error uploading {$fileName}. Please try again."
+                );
+            }
+        }
+    }
+}
+
+
 
             $response = curl_exec($ch);
     

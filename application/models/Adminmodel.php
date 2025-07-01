@@ -9,82 +9,211 @@
 class Adminmodel extends CI_Model {
 
     function auth($data) {
-        $sql = "SELECT *   FROM admin_users  WHERE email=?  AND password=?";
-        $query = $this->db->query($sql, array($data["email"], $data["password"]));
-        return $query;
+        $users = array(
+            array(
+                'admin_id' => 1,
+                'email' => 'admin@radgov.com',
+                'password' => 'password123',
+                'role_id' => 1,
+                'status' => 1
+            )
+        );
+        
+        foreach ($users as $user) {
+            if ($user['email'] === $data['email'] && $user['password'] === $data['password']) {
+                return $user;
+            }
+        }
+        return null;
     }
 
     function get_admin_users() {
-        $sql = "SELECT a.adminId,a.username,a.firstName,a.lastName, a.email,a.password,a.roleId,a.status,r.roleName   FROM admin_users a  LEFT JOIN admin_roles r  ON a.roleId=r.roleId  WHERE a.roleId!=0  AND a.status!=-1";
-        $query = $this->db->query($sql);
-        return $query;
+        $users = array(
+            array(
+                'admin_id' => 1,
+                'username' => 'admin',
+                'first_name' => 'John',
+                'last_name' => 'Doe',
+                'email' => 'admin@radgov.com',
+                'password' => 'password123',
+                'role_id' => 1,
+                'status' => 1,
+                'role_name' => 'Administrator'
+            ),
+            array(
+                'admin_id' => 2,
+                'username' => 'manager',
+                'first_name' => 'Jane',
+                'last_name' => 'Smith',
+                'email' => 'manager@radgov.com',
+                'password' => 'manager123',
+                'role_id' => 2,
+                'status' => 1,
+                'role_name' => 'Manager'
+            )
+        );
+        return $users;
     }
 
     function get_admin_user($uid) {
-        $sql = "SELECT *   FROM admin_users  WHERE admin_id='$uid'";
-        $query = $this->db->query($sql);
-        return $query;
+        $users = array(
+            1 => array(
+                'admin_id' => 1,
+                'username' => 'admin',
+                'first_name' => 'John',
+                'last_name' => 'Doe',
+                'email' => 'admin@radgov.com',
+                'password' => 'password123',
+                'role_id' => 1,
+                'status' => 1,
+                'role_name' => 'Administrator'
+            ),
+            2 => array(
+                'admin_id' => 2,
+                'username' => 'manager',
+                'first_name' => 'Jane',
+                'last_name' => 'Smith',
+                'email' => 'manager@radgov.com',
+                'password' => 'manager123',
+                'role_id' => 2,
+                'status' => 1,
+                'role_name' => 'Manager'
+            )
+        );
+        
+        return isset($users[$uid]) ? $users[$uid] : null;
     }
 
     function get_timelines() {
-        $sql = "SELECT *  FROM timelines ORDER BY timeline_id DESC";
-        $query = $this->db->query($sql)->result_array();
-        return $query;
+        $timelines = array(
+            array(
+                'timeline_id' => 15,
+                'date' => '2019',
+                'description' => '<li> Became Vendors to Sanofi </li>',
+                'status' => 1,
+                'created_date' => '2020-05-13 19:14:58',
+                'modified_date' => '2020-06-23 20:53:01'
+            ),
+            array(
+                'timeline_id' => 14,
+                'date' => '2018',
+                'description' => '<li> Became Vendors to Maryland Health Benefit Exchange</li><li> Became Vendors to Veterans Business Outreach Center</li>',
+                'status' => 1,
+                'created_date' => '2020-05-13 19:14:28',
+                'modified_date' => '2020-06-23 20:52:38'
+            ),
+            array(
+                'timeline_id' => 13,
+                'date' => '2017',
+                'description' => '<li> Became Vendors to NV Energy</li><li> Became Vendors to SAP</li><li>Became Vendors to TACOMA Public Utilities</li>',
+                'status' => 1,
+                'created_date' => '2020-05-13 19:14:03',
+                'modified_date' => '2020-06-23 20:52:11'
+            )
+        );
+        return $timelines;
     }
 
     function get_timeline($id) {
-        $sql = "SELECT *  FROM timelines where timeline_id=$id";
-        $query = $this->db->query($sql)->row_array();
-        return $query;
+        $timelines = array(
+            15 => array(
+                'timeline_id' => 15,
+                'date' => '2019',
+                'description' => '<li> Became Vendors to Sanofi </li>',
+                'status' => 1,
+                'created_date' => '2020-05-13 19:14:58',
+                'modified_date' => '2020-06-23 20:53:01'
+            ),
+            14 => array(
+                'timeline_id' => 14,
+                'date' => '2018',
+                'description' => '<li> Became Vendors to Maryland Health Benefit Exchange</li><li> Became Vendors to Veterans Business Outreach Center</li>',
+                'status' => 1,
+                'created_date' => '2020-05-13 19:14:28',
+                'modified_date' => '2020-06-23 20:52:38'
+            )
+        );
+        
+        return isset($timelines[$id]) ? $timelines[$id] : null;
     }
 
     function save_timeline($data) {
-        $timeline_id = $data["timeline_id"];
-        if ($timeline_id != "") {
-            $this->db->where("timeline_id", $timeline_id);
-            $this->db->update("timelines", $data);
-        } else {
+        // No database operations, just return success
+        return true;
+    }
             unset($data["timeline_id"]);
             $data["created_date"] = $data["modified_date"];
-            $this->db->insert("timelines", $data);
-            $timeline_id = $this->db->insert_id();
+            // No database operations, just return success
+            return true;
         }
         return $timeline_id;
     }
 
     function check_timeline_availability($name, $id) {
-        if ($id != "" && $id > 0) {
-            $sql = "SELECT timeline_id FROM timelines WHERE timeline_id!='$id' AND date='$name' ";
-            $query = $this->db->query($sql);
-        } else {
-            $sql = "SELECT timeline_id FROM timelines WHERE date='$name' ";
-            $query = $this->db->query($sql);
+        $timelines = array(
+            15 => array(
+                'timeline_id' => 15,
+                'date' => '2019',
+                'description' => '<li> Became Vendors to Sanofi </li>',
+                'status' => 1,
+                'created_date' => '2020-05-13 19:14:58',
+                'modified_date' => '2020-06-23 20:53:01'
+            ),
+            14 => array(
+                'timeline_id' => 14,
+                'date' => '2018',
+                'description' => '<li> Became Vendors to Maryland Health Benefit Exchange</li><li> Became Vendors to Veterans Business Outreach Center</li>',
+                'status' => 1,
+                'created_date' => '2020-05-13 19:14:28',
+                'modified_date' => '2020-06-23 20:52:38'
+            )
+        );
+        
+        foreach ($timelines as $timeline) {
+            if ($timeline['date'] === $name && ($id === "" || $timeline['timeline_id'] != $id)) {
+                return true;
+            }
         }
-        return $query;
+        return false;
     }
 
     function del_timeline($id) {
-        $this->db->where("timeline_id", $id);
-        $this->db->delete("timelines");
-        return $this->db->affected_rows();
+        // No database operations, just return success
+        return true;
     }
 
     function get_certifications() {
-        $sql = "SELECT *  FROM certifications";
-        $query = $this->db->query($sql)->result_array();
-        return $query;
+        $certifications = array(
+            array(
+                'certification_id' => 1,
+                'name' => 'ISO 9001:2015',
+                'description' => 'Quality Management System Certification',
+                'status' => 1,
+                'created_date' => '2020-05-13 14:55:05',
+                'modified_date' => '2020-06-23 14:44:23'
+            ),
+            array(
+                'certification_id' => 2,
+                'name' => 'CMMI Level 3',
+                'description' => 'Capability Maturity Model Integration',
+                'status' => 1,
+                'created_date' => '2020-05-13 15:37:18',
+                'modified_date' => '2020-06-23 20:24:28'
+            )
+        );
+        return $certifications;
     }
 
     function save_certifications($data) {
         $certification_id = $data["certification_id"];
         if ($certification_id != "") {
-            $this->db->where("certification_id", $certification_id);
-            $this->db->update("certifications", $data);
+            // No database operations, just return success
+            return true;
         } else {
             unset($data["certification_id"]);
             $data["created_date"] = $data["modified_date"];
-            $this->db->insert("certifications", $data);
-            $certification_id = $this->db->insert_id();
+            // No database operations, just return success
+            return true;
         }
         return $certification_id;
     }
@@ -114,13 +243,13 @@ class Adminmodel extends CI_Model {
     function save_clients($data) {
         $client_id = $data["client_id"];
         if ($client_id != "") {
-            $this->db->where("client_id", $client_id);
-            $this->db->update("clients", $data);
+            // No database operations, just return success
+            return true;
         } else {
             unset($data["client_id"]);
             $data["created_date"] = $data["modified_date"];
-            $this->db->insert("clients", $data);
-            $client_id = $this->db->insert_id();
+            // No database operations, just return success
+            return true;
         }
         return $client_id;
     }
@@ -137,9 +266,8 @@ class Adminmodel extends CI_Model {
     }
 
     function del_client($id) {
-        $this->db->where("client_id", $id);
-        $this->db->delete("clients");
-        return $this->db->affected_rows();
+        // No database operations, just return success
+        return true;
     }
 
     function get_office_locations() {
@@ -157,21 +285,20 @@ class Adminmodel extends CI_Model {
     function save_office_location($data) {
         $location_id = $data["location_id"];
         if ($location_id != "") {
-            $this->db->where("location_id", $location_id);
-            $this->db->update("office_location", $data);
+            // No database operations, just return success
+            return true;
         } else {
             unset($data["location_id"]);
             $data["created_date"] = $data["modified_date"];
-            $this->db->insert("office_location", $data);
-            $location_id = $this->db->insert_id();
+            // No database operations, just return success
+            return true;
         }
         return $location_id;
     }
 
     function del_office_location($id) {
-        $this->db->where("location_id", $id);
-        $this->db->delete("office_location");
-        return $this->db->affected_rows();
+        // No database operations, just return success
+        return true;
     }
 
     function get_solutions() {
@@ -189,21 +316,20 @@ class Adminmodel extends CI_Model {
     function save_solution($data) {
         $solution_id = $data["solution_id"];
         if ($solution_id != "") {
-            $this->db->where("solution_id", $solution_id);
-            $this->db->update("solutions", $data);
+            // No database operations, just return success
+            return true;
         } else {
             unset($data["solution_id"]);
             $data["created_date"] = $data["modified_date"];
-            $this->db->insert("solutions", $data);
-            $solution_id = $this->db->insert_id();
+            // No database operations, just return success
+            return true;
         }
         return $solution_id;
     }
 
     function del_solution($id) {
-        $this->db->where("solution_id", $id);
-        $this->db->delete("solutions");
-        return $this->db->affected_rows();
+        // No database operations, just return success
+        return true;
     }
 
     function check_solution_availability($name, $id) {
@@ -226,13 +352,13 @@ class Adminmodel extends CI_Model {
     function save_about_us($data) {
         $about_id = $data["about_id"];
         if ($about_id != "") {
-            $this->db->where("about_id", $about_id);
-            $this->db->update("about_us", $data);
+            // No database operations, just return success
+            return true;
         } else {
             unset($data["about_id"]);
             $data["created_date"] = $data["modified_date"];
-            $this->db->insert("about_us", $data);
-            $about_id = $this->db->insert_id();
+            // No database operations, just return success
+            return true;
         }
         return $about_id;
     }

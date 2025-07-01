@@ -82,7 +82,7 @@
                 alt="rocket_contact" />
         </div>
         <div class="contact-container">
-            <form method="post" id="contact_form" action="#">
+            <form >
                 <h3 class="mb-4">CONTACT US</h3>
                 <div class="row">
                     <div class="col-md-12">

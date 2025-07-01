@@ -519,6 +519,12 @@ class user_model extends CI_Model {
             'company_image1' => '5ebd051c51cae_71359.png',
             'company_profile2' => "Over the years RADGOV has sustained an impressive growth rate in both capabilities and profitability, and is now positioned to be one of the major contributors in every sector. At RADGOV, we continually undergo transformation and reorientation in response to the rapidly evolving needs of our esteemed clients. RADGOV has a spread of services on offer packaged with technical excellence and quality to facilitate effective IT and staffing solutions.",
             'company_image2' => '5ebd05371a4d4_03785.png',
+            'vision' => "To be an organisation that is the provider of the highest level of satisfaction to customers, ambassadors and co-workers.",
+            'vision_image' => '5ebd057936209_20357.png',
+            'mission' => "To establish strategic partnerships and offer competitive advantage to our clients in the areas of Technology/ Process Consulting, Custom Software Development, QA / Testing, Systems Integration, Project Management, Network and Infrastructure Management and Product Engineering / GIS Services, while fulfilling our employees’ aspirations by virtue of delivery of our world-class and cost-effective services, and to create a family-like environment for our employees, while preserving our core value system.",
+            'mission_image' => '5ebd05911e7ab_65308.png',
+            'value' => "<li>Honesty, ethics and integrity guide our behavior and decisions.</li>\n<li>Respect the dignity and worth of every individual and act accordingly.</li>\n<li>Our commitment to quality is uncompromising. We recognize that it is not our own, but our customers' perceptions of quality that are most important.</li>\n<li>\"If it is ethical and enhances customer satisfaction, do it.\"</li>",
+            'value_image' => '5ebd068045156_79835.png',
             'status' => 1,
             'created_date' => '2020-05-13 14:55:05',
             'modified_date' => '2020-06-23 14:44:23'

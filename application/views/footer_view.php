@@ -1,165 +1,75 @@
 <!---============= Start Widget Area ============--->
 <footer class="footer-area">
-    <?php
-    $locations = $this->user_model->get_office_location();
-    if (count($locations) > 0) {
-        ?>
     <div class="location-block">
         <div class="container">
             <div class="row">
-                <?php
-                    $i = 0;
-                    foreach ($locations as $row_location) {
-                        ?>
                 <div class="col-lg-3 col-md-3 col-sm-12 mb-md-0 mb-3 ftr-box">
                     <h5 class="ftrhead">Registered Office</h5>
                     <div class="mb-0 ftr-location">
-                       
-                            <?php echo $row_location['address'] ?>
+                        <p>6750 N. Andrews Ave., Suite 200 Fort Lauderdale, FL 33309</p>
+                        <p class=""><strong>Phone:</strong> 954.938.2800 </p>
+                        <p class=""><strong>Fax:</strong>954.938.2004 </p>
+                        <p class="">
+                            <strong>Email:</strong> 
+                            <a href="mailto:info@radgov.com">info@radgov.com</a>
                         </p>
-                        <?php if (isset($row_location['mobile'])) { ?>
-                        <p class="mb-0"><strong>Phone:</strong> <?php echo $row_location['mobile'] ?> </p>
-                        <?php } ?>
-                        <?php if (isset($row_location['fax'])) { ?>
-                        <p class="mb-0"><strong>Fax:</strong><?php echo $row_location['fax'] ?> </p>
-                        <?php } ?>
-                        <?php if (isset($row_location['contact_email'])) { ?>
-                        <p class="mb-0"><strong>Email:</strong> <a
-                                href="mailto:info@radgov.com"><?php echo $row_location['contact_email'] ?></a>
-                            <?php } ?>
                     </div>
                     <br>
                     <h5 class="ftrhead">Follow us on</h5>
                     <div class="social-media-icons col-xs-12">
                         <ul class="list-inline col-xs-12">
-                            <a href="https://www.facebook.com/radhealth/" target="_blank"><i
-                                    class="fa fa-facebook fa-1x"></i></a>
+                            <a href="https://www.facebook.com/radhealth/" target="_blank"><i class="fa fa-facebook fa-1x"></i></a>
                             <a href="https://x.com/RADHealth_" target="_blank"><i class="fa fa-twitter fa-1x"></i></a>
-                            <a href="https://www.linkedin.com/company/radhealth/?viewAsMember=true" target="_blank"><i
-                                    class="fa fa-linkedin fa-1x"></i></a>
-                                    <a href="https://www.instagram.com/radhealth_/?hl=en" target="_blank"><i
-                                    class="fa fa-instagram fa-1x"></i></a>
+                            <a href="https://www.linkedin.com/company/radhealth/?viewAsMember=true" target="_blank"><i class="fa fa-linkedin fa-1x"></i></a>
+                            <a href="https://www.instagram.com/radhealth_/" target="_blank"><i class="fa fa-instagram fa-1x"></i></a>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 mb-md-0 mb-3 ftr-box">
                     <h5 class="ftrhead">Operating From</h5>
                     <div class="mb-0 ftr-location">
-                        <p>
-                        101 Morgan Lane, Suite # 304 Plainsboro, NJ 08536
-                        </p>
-                        
+                        <p>101 Morgan Lane, Suite # 304 Plainsboro, NJ 08536</p>
                         <p class=""><strong>Phone:</strong> 954.938.2800 </p>
-                      
                         <p class=""><strong>Fax:</strong>954.938.2004 </p>
-                     
                         <p class="">
                             <strong>Email:</strong> 
                             <a href="mailto:info@radgov.com">info@radgov.com</a>
                         </p>
                     </div>
-              
-                
                 </div>
-                <?php
-                        $i++;
-                        if ($i == 1)
-                            break;
-                    }
-                    ?>
-
-                <!---------- Services ------------->
-                <?php
-                    $services = $this->user_model->get_services_sub_services();
-                    if (count($services) > 0) {
-                        foreach ($services as $row_service) {
-                            $sub_services = explode(",", $row_service['sub_services']);
-                            $more_services = explode(",", $row_service['more_services']);
-                            ?>
                 <div class="col-lg-3 col-md-3 col-sm-12 text-left pl-md-4">
-                    <!-- <h5 class="ftrhead"><?php echo $row_service['name']; ?></h5>
+                    <h5 class="ftrhead pt-3"><a href="<?php echo base_url() ?>service-detail/rad-health" class="ftrhead">Rad Health<sup>+</sup></a></h5>
                     <ul class="list-unstyled ftr-quicklinks">
-                        <?php
-                                    foreach ($sub_services as $key => $ss) {
-                                        if ($more_services[$key] == "Yes") {
-                                            ?>
-                        <li>
-                            <a
-                                href="<?php echo base_url() ?>service/<?php echo strtolower(str_replace(" ", "-", $ss)); ?>"><?php echo $ss; ?></a>
-                        </li>
-                        <?php
-                                        } else {
-                                            $route = ($row_service['layout'] == '1') ? 'service-detail' : 'detail-service';
-                                            ?>
-                        <li><a
-                                href="<?php echo base_url() . $route ?>/<?php echo strtolower(str_replace(" ", "-", $ss)); ?>"><?php echo $ss; ?></a>
-                        </li>
-                        <?php
-                                        }
-                                    }
-                                    ?>
-                    </ul> -->
-                    <?php if($row_service['name'] == "IT Services") { ?>
-                        <h5 class="ftrhead pt-3"><a href="<?php  echo base_url() . "service-detail/rad-health" ?>" class="ftrhead">Rad Health<sup>+</sup></a></h5>
-                        <ul class="list-unstyled ftr-quicklinks">
-                        <li>
-                            <a>Healthcare Staffing solutions.</a>
-                        </li>
-                        <li>
-                            <a>Healthcare Information Consulting</a>
-                        </li>
-                        <li>
-                            <a href="<?php  echo base_url() . "payrolling-services" ?>">Payrolling Services</a>
-                        </li>
-                        
+                        <li><a>Healthcare Staffing solutions.</a></li>
+                        <li><a>Healthcare Information Consulting</a></li>
+                        <li><a href="<?php echo base_url() ?>payrolling-services">Payrolling Services</a></li>
                     </ul>
-                    <?php } ?>
                 </div>
-              
-                <?php }
-                    }
-                    ?>
-
-
- 
-
-                <!---------- Social Media --------------->
-                <!-- <div class="col-lg-3 col-md-3 col-sm-12 text-left pl-md-4">
-                    </div>     -->
-
             </div>
         </div>
     </div>
-    <?php } ?>
     <div class="footer-secondary">
         <div class="container">
             <hr class="ftrhr">
             <div class="row align-items-center">
                 <div class="col-lg-8 col-md-4">
-                    <p class="mb-0 ">Copyright <?php echo date("Y"); ?>, RadHealth<sup>+</sup>. ALL RIGHTS RESERVED | 
+                    <p class="mb-0">Copyright <?php echo date("Y"); ?>, RadHealth<sup>+</sup>. ALL RIGHTS RESERVED | 
                     <a href="<?php echo base_url() ?>privacy-policy"> Privacy Policy  </a>
                     </p>
                 </div>
-                <!-- <div class="col-lg-3 col-md-4"></div> -->
                 <div class="col-lg-4 col-md-4">
                     <p class="mb-0 text-lg-right text-md-right text-left">
-                        <span class="text-white">Powered by</span> <a href=""
-                            class="ftr-credit" target="_blank">Radgov, Inc </a>
+                        <span class="text-white">Powered by</span> <a href="" class="ftr-credit" target="_blank">Radgov, Inc </a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!---=============   Sticky Footer    ================-->
     <div id="mobileShow">
         <table>
             <tbody>
                 <tr>
-                    <td><a href="tel:+1 (954) 938 2800"><i aria-hidden="true" class="fa facolor fa-phone"></i> Call
-                            Us</a>
-                    </td>
+                    <td><a href="tel:+1 (954) 938 2800"><i aria-hidden="true" class="fa facolor fa-phone"></i> Call Us</a></td>
                     <td><a href="mailto:info@radgov.com"><i aria-hidden="true" class="fa facolor fa-envelope"></i>
                             Mail Us</a></td>
                 </tr>

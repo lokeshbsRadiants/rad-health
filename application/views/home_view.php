@@ -115,34 +115,6 @@
     <div class="container">
         <h2 class="title-text mb-5" data-aos="fade-up">SERVICES</h2>
         <div class="row no-gutter">
-            <!-- <div class="col-lg-3 col-md-3 text-lg-left text-md-left text-center service">
-                <img src="<?php echo base_url() ?>assets/images/lazyload-icon.gif"
-                    data-src="<?php echo base_url() ?>assets/images/icons/services/radgov-it-services.png"
-                    alt="radgov-it-services" class="img-fluid lazyload service-icon pb-lg-4 pb-md-4 pb-0"
-                    data-aos="zoom-in">
-                <div class="serv" data-aos="zoom-in">
-                    <h5 class="service-title py-3">RADgov IT Services</h5>
-                    <p>RadGov excels in providing a variety of IT Planning Services based on varied needs of
-                        undertakings</p>
-                    <a onclick="$('.aside').asidebar('open')" id="toggle"
-                        class="service-link button_container homeServelinkIt">Read
-                        More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                </div>
-            </div> -->
-            <!-- <div class="col-lg-3 col-md-3 text-lg-left text-md-left text-center service">
-                <img src="<?php echo base_url() ?>assets/images/lazyload-icon.gif"
-                    data-src="<?php echo base_url() ?>assets/images/icons/services/radgov-staffing-services.png"
-                    alt="radgov-staffing-services" class="img-fluid lazyload service-icon pb-lg-4 pb-md-4 pb-0"
-                    data-aos="zoom-in">
-                <div class="serv" data-aos="zoom-in">
-                    <h5 class="service-title py-1">RADgov Workforce Services</h5>
-                    <p>RADgov offers a variety of Management Consulting Services to government and private
-                        establishments </p>
-                    <a onclick="$('.aside').asidebar('open')" id="toggle"
-                        class="service-link button_container homeServelinkWf">Read
-                        More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                </div>
-            </div> -->
             <div class="col-lg-3 col-md-3 text-lg-left text-md-left text-center service-last">
              
                 <div class="" data-aos="zoom-in">

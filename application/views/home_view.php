@@ -5,8 +5,7 @@
             <div class="carousel-item active" data-interval="9000">
                 <img src="<?php echo base_url() ?>assets/images/banner2.png" class="w-100 d-none d-md-block" alt="...">
                 <div class="carousel-caption">
-                    <h6 class="banner-text1 text-left ps-md-5"><span class="banner-title">RADHEALTH<sup>+</sup></span> - Empowering healthcare with qualified professionals dedicated to patient care.
-                    Your trusted partner in building strong, reliable medical teams.
+                    <h6 class="banner-text1 text-left ps-md-5"><span class="banner-title">RADHEALTH<sup>+</sup></span> - empowers hospitals, health systems, and government healthcare programs with top-tier clinical and non-clinical professionals—rapidly deployed, fully credentialed, and ready to make an impact. 
                 </h6>
                 <div class="div_btn pt-3">
                 <button type="button" class="btn div_btn1 p-2"><a href="<?php  echo base_url() . "service-detail/rad-health" ?>" class="readmorebtn p-3">Know More</a></button>
@@ -88,12 +87,10 @@
                         aria-hidden="true"></i></a>
                     </div> -->
                     <div class="tab-pane show active " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    <p > Our organization has established partnerships with healthcare facilities and practices 
-                        throughout the United States, providing a diverse range of candidates for healthcare professionals including 
-                        nurses and other allied health. <br>
-                    Our dedicated team possesses the expertise and clinical insight necessary to align the unique skills with placements
-                         that will maximize the potential and ensure a positive work environment at each location.
-                         We are placing some of the most crucial healthcare roles that make a difference  </p>
+                    <p > Our Identity 
+Radhealth+ is the healthcare staffing and workforce solutions division of RadGov, a federally recognized provider of mission-critical personnel and services. We were created to meet the evolving demands of modern healthcare staffing—balancing quality, speed, and regulatory precision. 
+
+We specialize in placing highly qualified professionals across clinical, allied, administrative, and public health roles, with customized workforce models for both private and government healthcare environments. </p>
                     <a  href="<?php echo base_url() ?>service-detail/rad-health" class="about-link">Read More <i class="fa fa-angle-right"
                         aria-hidden="true"></i></a>
                     </div>
@@ -112,7 +109,7 @@
 
 <!---============= Start Services Area =============--->
 <section class="service-area section">
-    <div class="container">
+  <div class="container">
         <h2 class="title-text mb-5" data-aos="fade-up">SERVICES</h2>
         <div class="row no-gutter">
             <div class="col-lg-3 col-md-3 text-lg-left text-md-left text-center service-last">
@@ -124,17 +121,17 @@
                     <a href="<?php echo base_url() ?>service-detail/rad-health" id="toggle"
                         class="service-link button_container homeServelinkWf">Read
                         More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
+    </div>
+  </div>
             <div class="col-lg-3 col-md-3 col-sm-12 my-auto pt-3 p-0">
                 <div class="service-block-img text-center">
                     <img src="<?php echo base_url() ?>assets/images/lazyload-icon.gif"
                         data-src="<?php echo base_url() ?>assets/images/service-image.png" class="img-fluid lazyload w-100"
                         alt="service-image" data-aos="fade-up">
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    </div>
+  </div>
 </section>
 
 

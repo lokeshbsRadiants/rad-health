@@ -1,8 +1,8 @@
 <!---============= Start Widget Area ============--->
 <footer class="footer-area">
     <div class="location-block">
-        <div class="container">
-            <div class="row">
+    <div class="container">
+        <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-12 mb-md-0 mb-3 ftr-box">
                     <h5 class="ftrhead">Registered Office</h5>
                     <div class="mb-0 ftr-location">
@@ -35,7 +35,7 @@
                             <strong>Email:</strong> 
                             <a href="mailto:info@radgov.com">info@radgov.com</a>
                         </p>
-                    </div>
+            </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 text-left pl-md-4">
                     <h5 class="ftrhead pt-3"><a href="<?php echo base_url() ?>service-detail/rad-health" class="ftrhead">Rad Health<sup>+</sup></a></h5>
@@ -48,12 +48,12 @@
             </div>
         </div>
     </div>
-    <div class="footer-secondary">
-        <div class="container">
-            <hr class="ftrhr">
-            <div class="row align-items-center">
-                <div class="col-lg-8 col-md-4">
-                    <p class="mb-0">Copyright <?php echo date("Y"); ?>, RadHealth<sup>+</sup>. ALL RIGHTS RESERVED | 
+<div class="footer-secondary">
+    <div class="container">
+        <hr class="ftrhr">
+        <div class="row align-items-center">
+            <div class="col-lg-8 col-md-4">
+                <p class="mb-0">Copyright <?php echo date("Y"); ?>, RadHealth<sup>+</sup>. ALL RIGHTS RESERVED | 
                     <a href="<?php echo base_url() ?>privacy-policy"> Privacy Policy  </a>
                     </p>
                 </div>

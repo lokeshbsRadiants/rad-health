@@ -114,6 +114,9 @@
             $epams = "";
             $data_management = "";
             $solution = "";
+            $services="";
+            $service="";
+            $careers="";
      
             switch ($page) {
                 case "home":
@@ -155,10 +158,15 @@
                 case "application_services":
                     $application_services = "active";
                     break;
-                // case "solution":
-                //     $solution = "active";
-                //     break;
-
+                case "services":
+                    $solution = "active";
+                    break;
+                case "service":
+                    $service = "active";
+                    break;
+                case "careers":
+                    $careers = "active";
+                    break;
                 default:
                     break;
             }
@@ -191,7 +199,9 @@
                         <?php } ?>
                   
 
-                        <li class="<?php echo $contact_us; ?>"><a href="<?php echo base_url() ?>contactus"></i>Contact
+                        <li class="<?php echo $service; ?>"><a href="<?php echo base_url() ?>service">Services</a></li>
+                    <li class="<?php echo $careers; ?>"><a href="<?php echo base_url() ?>careers">Careers</a></li>
+                    <li class="<?php echo $contact_us; ?>"><a href="<?php echo base_url() ?>contactus"></i>Contact
                                 Us </a></li>
                     </ul>
                 </div>

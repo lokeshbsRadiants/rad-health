@@ -1,6 +1,6 @@
 <?php
 
-class home extends CI_Controller {
+class Home extends CI_Controller {
 
     function __construct() {
         parent::__construct();
@@ -12,6 +12,22 @@ class home extends CI_Controller {
         $data["page"] = "home";
         $this->load->view("header_view", $data);
         $this->load->view("home_view", $data);
+        $this->load->view("footer_view");
+    }
+
+    function service() {
+        $data["title"] = "RADgov | Services";
+        $data["page"] = "service";
+        $this->load->view("header_view", $data);
+        $this->load->view("services_view", $data);
+        $this->load->view("footer_view");
+    }
+
+    function careers() {
+        $data["title"] = "RADgov | Careers";
+        $data["page"] = "careers";
+        $this->load->view("header_view", $data);
+        $this->load->view("careers_view", $data);
         $this->load->view("footer_view");
     }
 

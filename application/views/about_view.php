@@ -140,11 +140,13 @@ if (count($timelines) > 0) {
                 <?php } if (isset($about_us['value']) && isset($about_us['value_image'])) { ?>
                 <div class="row align-items-center values-block">
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <h2 class="title-text vision-heading" data-aos="fade-up">VALUES</h2>
+                        <h2 class="title-text vision-heading" data-aos="fade-up">Credentialed. Certified. Committed. 
+</h2>
                         <img src="<?php base_url() ?>assets/images/lazyload-icon.gif"
                             data-src="<?php base_url() ?>assets/uploads/about_us/<?php echo $about_us['value_image']; ?>"
                             class="img-fluid lazyload values-img d-lg-none d-md-none d-sm-block d-block"
                             alt="values-img" data-aos="fade-up">
+                            <h5 class="px-2">Every healthcare professional we deploy is:  </h5>
                         <ul class="round" data-aos="fade-up">
                             <?php echo $about_us['value']; ?>
                         </ul>
@@ -160,53 +162,6 @@ if (count($timelines) > 0) {
             </div>
         </div>
     </section>
-    <!---============= End Values Area ============--->
-
-    <!---============= Start Corporate Strategy Area ============--->
-    <section class="section strategy-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <h2 class="title-text vision-heading" data-aos="fade-up">CORPORATE STRATEGY</h2>
-                    <div class="mainstrategy">
-                        <span class="strategyline" data-aos="fade-up">
-                            <div class="strategyline-icon"><i class="fa fa-globe"></i></div>
-                            <div class="strategyline-content">
-                                <h3 class="title">Corporate Strategy</h3>
-                                <p class="description">Developing a strategic direction supported by necessary
-                                    reallocation of resources and coordinated business unit plans; and designing a
-                                    process for development of a sustainable strategy. We have a set of core
-                                    capabilities and tools that help strengthen our strategies at the enterprise level.
-                                </p>
-                            </div>
-                        </span>
-                        <span class="strategyline" data-aos="fade-up">
-                            <div class="strategyline-icon"><i class="fa fa-rocket"></i></div>
-                            <div class="strategyline-content">
-                                <h3 class="title">Portfolio strategy and resource allocation</h3>
-                                <p class="description">Managing our portfolios through the annual review of our budget.
-                                    RADgov’s Senior strategy executives, in particular, have pointed to the need to
-                                    better manage uncertainty in strategy development through flexible and adaptive
-                                    strategic management practices. This requires a continual dialogue on strategic
-                                    issues, as well as the ability to execute a new strategic plan.</p>
-                            </div>
-                        </span>
-                        <span class="strategyline" data-aos="fade-up">
-                            <div class="strategyline-icon"><i class="fa fa-briefcase"></i></div>
-                            <div class="strategyline-content">
-                                <h3 class="title">Strategic management and planning</h3>
-                                <p class="description">Reconciling short-term tactical moves with long-term strategic
-                                    goals, and building the capabilities needed to execute our strategies. It
-                                    strengthens our strategy development processes, enhances overall strategic
-                                    decision-making, and improves execution.</p>
-                            </div>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!---============= End Corporate Strategy Area ============--->
 
     <!---============= Start Team Area ============--->
     <section class="section team-area">
@@ -261,51 +216,54 @@ if (count($timelines) > 0) {
     <!---============= End Team Area ============--->
     <section class="section business-model-area">
         <div class="container">
-            <h2 class="title-text vision-heading" data-aos="fade-up">BUSINESS MODEL</h2>
-            <p class="business-para mb-5" data-aos="fade-up">The Resource Management System (RMS) is a proprietary
-                application which maximizes efficiency and effectively manages internal/external resources. A glimpse of
-                the benefits of RMS here-</p>
+            <h2 class="title-text vision-heading" data-aos="fade-up">Our MSP Expertise 
+</h2>
+            <p class="business-para mb-5" data-aos="fade-up">We proudly deliver recruiting services to leading hospitals and health systems nationwide through strategic partnerships with major Managed Service Provider (MSP) programs. Our deep experience in high-volume, multi-layered MSP environments allows us to meet SLAs, ensure credentialing compliance, and deliver exceptional talent at scale. -</p>
             <div class="row align-items-center">
-                <div class="col-lg-5 col-md-5 col-sm-12">
-                    <img src="<?php base_url() ?>assets/images/lazyload-icon.gif"
-                        data-src="<?php base_url() ?>assets/images/business-model-left.png" class="img-fluid lazyload"
-                        alt="business-model" data-aos="fade-up">
+                <div class="col-lg-12 col-md-12 col-sm-12 ">
+                    <h2 class="title-text vision-heading" data-aos="fade-up">24/7 Support. National Reach. Local Expertise. </h2>
+
                 </div>
                 <div class="col-lg-7 col-md-7 col-sm-12">
                     <div class="business-model-list">
-                        <ul class="list-group" data-aos="fade-up">
-                            <h4>T&M</h4>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <ul class="list-group gap-3 p-3" data-aos="fade-up">
+                            
+                            <li class="list-group-item d-flex justify-content-start gap-3 align-items-center mb-3">
                                 <img src="<?php base_url() ?>assets/images/lazyload-icon.gif"
                                     data-src="<?php base_url() ?>assets/images/icons/about-us/business-icon.png"
-                                    class="img-fluid lazyload business-icon-left" alt="business-icon">
-                                Relationship based, Flexible teams, Enables business impact, Suits complex projects,
-                                Efficient due to knowledge retention, Minimized client overheads
+                                    class="img-fluid lazyload business-icon-left" alt="business-icon"> 
+                                    On-call recruiting teams across U.S. time zone
                             </li>
-                            <h4>Firm Fixed-Price</h4>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                          
+                            <li class="list-group-item d-flex justify-content-start gap-3 align-items-center mb-3">
                                 <img src="<?php base_url() ?>assets/images/lazyload-icon.gif"
                                     data-src="<?php base_url() ?>assets/images/icons/about-us/business-icon.png"
                                     class="img-fluid lazyload business-icon-left" alt="business-icon">
-                                Transaction based, Limited impact, Good for projects where the scope is very clear,
-                                Unchanging client overhead, Unchanging client budget
+                               Regional talent pipelines with market insight 
+
                             </li>
-                            <h4> Cost Plus Fixed-Fee</h4>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                           
+                            <li class="list-group-item d-flex justify-content-start gap-3 align-items-center mb-3">
                                 <img src="<?php base_url() ?>assets/images/lazyload-icon.gif"
                                     data-src="<?php base_url() ?>assets/images/icons/about-us/business-icon.png"
                                     class="img-fluid lazyload business-icon-left" alt="business-icon">
-                                Fixed salary per actuals, Fixed monthly seat cost, Specialized equipments / SW per
-                                actuals, Management fee-% of total cost, Secured resource availability via fixed fee
-                                payment, 'Use or lose' basis
+                              National credentialing center to speed placements 
+
                             </li>
-                            <h4>Hybrid</h4>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                           
+                            <li class="list-group-item d-flex justify-content-start gap-3 align-items-center mb-3">
                                 <img src="<?php base_url() ?>assets/images/lazyload-icon.gif"
                                     data-src="<?php base_url() ?>assets/images/icons/about-us/business-icon.png"
                                     class="img-fluid lazyload business-icon-left" alt="business-icon">
-                                Major portion FFP/Deliverable based, Partially T&M and CPF, Flexible, Maximized ROI
-                                without compromise, Suitable for large complex projects
+                               Digital onboarding workflows for simplicity 
+
+                            </li>
+                            <li class="list-group-item d-flex justify-content-start gap-3 align-items-center mb-3">
+                                <img src="<?php base_url() ?>assets/images/lazyload-icon.gif"
+                                    data-src="<?php base_url() ?>assets/images/icons/about-us/business-icon.png"
+                                    class="img-fluid lazyload business-icon-left" alt="business-icon">
+                            Clinical support post-placement 
+
                             </li>
                         </ul>
                     </div>

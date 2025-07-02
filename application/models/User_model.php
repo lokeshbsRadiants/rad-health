@@ -515,15 +515,19 @@ class user_model extends CI_Model {
         $about_us = array(
             'about_id' => 1,
             'title' => 'About Us',
-            'company_profile1' => "RadGov.Inc. headquartered in Fort Lauderdale, Florida was founded in 2005. RadGov was created exclusively to focus on Federal agencies and to provide Staff augmentation and IT services to private clients. As an integrated IT solutions Company, we have proven our experience and expertise in Ecommerce, IT consulting Software development and Staff augmentation (IT & Non –IT). We leverage our capabilities to support our clients through dedicated, organized and client-focused teams with no compromise on quality.",
+            'company_profile1' => "Radhealth+ is the healthcare staffing and workforce solutions division of RadGov, a federally recognized provider of mission-critical personnel and services. We were created to meet the evolving demands of modern healthcare staffing—balancing quality, speed, and regulatory precision.",
             'company_image1' => '5ebd051c51cae_71359.png',
-            'company_profile2' => "Over the years RADGOV has sustained an impressive growth rate in both capabilities and profitability, and is now positioned to be one of the major contributors in every sector. At RADGOV, we continually undergo transformation and reorientation in response to the rapidly evolving needs of our esteemed clients. RADGOV has a spread of services on offer packaged with technical excellence and quality to facilitate effective IT and staffing solutions.",
+            'company_profile2' => "We specialize in placing highly qualified professionals across clinical, allied, administrative, and public health roles, with customized workforce models for both private and government healthcare environments. ",
             'company_image2' => '5ebd05371a4d4_03785.png',
-            'vision' => "To be an organisation that is the provider of the highest level of satisfaction to customers, ambassadors and co-workers.",
+            'vision' => "To be the most trusted healthcare workforce partner—driven by integrity, focused on innovation, and committed to delivering measurable impact in every placement. ",
             'vision_image' => '5ebd057936209_20357.png',
-            'mission' => "To establish strategic partnerships and offer competitive advantage to our clients in the areas of Technology/ Process Consulting, Custom Software Development, QA / Testing, Systems Integration, Project Management, Network and Infrastructure Management and Product Engineering / GIS Services, while fulfilling our employees’ aspirations by virtue of delivery of our world-class and cost-effective services, and to create a family-like environment for our employees, while preserving our core value system.",
+            'mission' => "To strengthen healthcare systems through high-impact staffing solutions that support better patient outcomes, provider wellbeing, and operational efficiency. ",
             'mission_image' => '5ebd05911e7ab_65308.png',
-            'value' => "<li>Honesty, ethics and integrity guide our behavior and decisions.</li>\n<li>Respect the dignity and worth of every individual and act accordingly.</li>\n<li>Our commitment to quality is uncompromising. We recognize that it is not our own, but our customers' perceptions of quality that are most important.</li>\n<li>\"If it is ethical and enhances customer satisfaction, do it.\"</li>",
+            'value' => "<li>Fully licensed and certified according to state and federal regulations 
+.</li>\n<li> Screened through a multi-step credentialing and compliance process 
+</li>\n<li>Backed by our internal quality assurance and clinical support team</li>\n<li> Cleared through background checks and immunization reviews 
+.</li>\n<li>Oriented on client-specific systems and care models 
+.</li>",
             'value_image' => '5ebd068045156_79835.png',
             'status' => 1,
             'created_date' => '2020-05-13 14:55:05',

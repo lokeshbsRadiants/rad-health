@@ -22,7 +22,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 mb-md-0 mb-3 ftr-box">
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-md-0 mb-3 ftr-box">
                     <h5 class="ftrhead">Northeast Operations Center</h5>
                     <div class="mb-0 ftr-location">
                         <p>101 Morgan Lane, Suite 304</p>

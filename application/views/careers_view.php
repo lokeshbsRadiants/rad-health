@@ -96,7 +96,7 @@
             <div class="col-md-6 col-lg-3 mb-4">
                 <div class="opportunity-card">
                     <div class="card-body text-center">
-                        <i class="fa fa-heartbeat text-primary fa-3x mb-3"></i>
+                        <i class="fa fa-plane text-primary fa-3x mb-3"></i>
                         <h4>Travel Nursing</h4>
                         <p>Explore new locations while making a difference in healthcare.</p>
                     </div>
@@ -106,7 +106,7 @@
             <div class="col-md-6 col-lg-3 mb-4">
                 <div class="opportunity-card">
                     <div class="card-body text-center">
-                        <i class="fa fa-meh text-primary fa-3x mb-3"></i>
+                        <i class="fa fa-heart text-primary fa-3x mb-3"></i>
                         <h4>Behavioral & Mental Health</h4>
                         <p>Impact lives through compassionate care and support.</p>
                     </div>
@@ -116,7 +116,7 @@
             <div class="col-md-6 col-lg-3 mb-4">
                 <div class="opportunity-card">
                     <div class="card-body text-center">
-                        <i class="fa fa-procedures text-primary fa-3x mb-3"></i>
+                        <i class="fa fa-handshake-o text-primary fa-3x mb-3"></i>
                         <h4>Allied Health & Therapy</h4>
                         <p>Provide essential care across various healthcare specialties.</p>
                     </div>
@@ -126,7 +126,7 @@
             <div class="col-md-6 col-lg-3 mb-4">
                 <div class="opportunity-card">
                     <div class="card-body text-center">
-                        <i class="fa fa-hospital text-primary fa-3x mb-3"></i>
+                        <i class="fa fa-flag text-primary fa-3x mb-3"></i>
                         <h4>Government & Public Health</h4>
                         <p>Serve your country through public health initiatives.</p>
                     </div>

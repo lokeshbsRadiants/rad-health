@@ -124,25 +124,38 @@
     }
     
     .services-content h3 {
-        color: #333;
-        margin-bottom: 30px;
+        color: #2c3e50;
+        margin-bottom: 2rem;
     }
     
-    .services-image {
-        padding: 30px;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    .services-content p {
+        color: #666;
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+    
+    .services-content ul {
+        padding-left: 20px;
+    }
+    
+    .services-content li {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .services-content li i {
+        margin-right: 1.2rem !important;
     }
     
     .service-details h4 {
         color: #2c3e50;
-        font-weight: bold;
+        margin-bottom: 1.5rem;
     }
     
     .service-details h5 {
-        color: #333;
-        margin-bottom: 20px;
+        color: #2c3e50;
+        margin-bottom: 1rem;
     }
     
     .service-details ul {
@@ -152,6 +165,11 @@
     .service-details li {
         font-size: 1rem;
         color: #666;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .service-details li i {
+        margin-right: 1.2rem !important;
     }
     
     .section-title {

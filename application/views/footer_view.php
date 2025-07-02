@@ -1,18 +1,15 @@
 <!---============= Start Widget Area ============--->
 <footer class="footer-area">
     <div class="location-block">
-    <div class="container">
-        <div class="row">
+        <div class="container">
+            <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-12 mb-md-0 mb-3 ftr-box">
-                    <h5 class="ftrhead">Registered Office</h5>
+                    <h5 class="ftrhead">Corporate Headquarters</h5>
                     <div class="mb-0 ftr-location">
-                        <p>6750 N. Andrews Ave., Suite 200 Fort Lauderdale, FL 33309</p>
-                        <p class=""><strong>Phone:</strong> 954.938.2800 </p>
-                        <p class=""><strong>Fax:</strong>954.938.2004 </p>
-                        <p class="">
-                            <strong>Email:</strong> 
-                            <a href="mailto:info@radgov.com">info@radgov.com</a>
-                        </p>
+                        <p>Radhealth+</p>
+                        <p>1500 W Cypress Creek Rd, Suite #415</p>
+                        <p>Fort Lauderdale, FL 33309</p>
+                        <p class=""><strong>Phone:</strong> +1 954-938-2800</p>
                     </div>
                     <br>
                     <h5 class="ftrhead">Follow us on</h5>
@@ -26,16 +23,11 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 mb-md-0 mb-3 ftr-box">
-                    <h5 class="ftrhead">Operating From</h5>
+                    <h5 class="ftrhead">Northeast Operations Center</h5>
                     <div class="mb-0 ftr-location">
-                        <p>101 Morgan Lane, Suite # 304 Plainsboro, NJ 08536</p>
-                        <p class=""><strong>Phone:</strong> 954.938.2800 </p>
-                        <p class=""><strong>Fax:</strong>954.938.2004 </p>
-                        <p class="">
-                            <strong>Email:</strong> 
-                            <a href="mailto:info@radgov.com">info@radgov.com</a>
-                        </p>
-            </div>
+                        <p>101 Morgan Lane, Suite 304</p>
+                        <p>Plainsboro, NJ 08536</p>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 text-left pl-md-4">
                     <h5 class="ftrhead pt-3"><a href="<?php echo base_url() ?>service-detail/rad-health" class="ftrhead">Rad Health<sup>+</sup></a></h5>

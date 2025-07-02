@@ -107,6 +107,136 @@ We specialize in placing highly qualified professionals across clinical, allied,
 </section>
 <!---============= End About Us Area =============--->
 
+<!-- ============ Start Why Radhealth+ Area ============ -->
+<section class="why-radhealth-area py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="title-text">Why Radhealth+</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="why-card p-4 bg-white rounded shadow">
+                    <ul class="list-unstyled">
+                        <li class="mb-3">Backed by RadGov’s government contracting legacy</li>
+                        <li class="mb-3">Clinical, allied health, and support staffing under one roof</li>
+                        <li class="mb-3">Rapid response staffing, even in crisis situations</li>
+                        <li class="mb-3">Nationwide reach with local insight</li>
+                        <li class="mb-3">Compliance-first: JCAHO, HIPAA, CMS, and E-Verify compliant</li>
+                        <li class="mb-3">24/7 recruiting and client support model</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="why-card p-4 bg-white rounded shadow">
+                    <!-- <h4 class="mb-4">Service Highlights</h4> -->
+                    <ul class="list-unstyled">
+                        <li class="mb-3">100+ specialties staffed</li>
+                        <li class="mb-3">24/7 response capability</li>
+                        <li class="mb-3">100% credentialing compliance</li>
+                        <li class="mb-3">Coverage in all 50 U.S. states</li>
+                        <li class="mb-3">10+ years of healthcare contracting experience</li>
+                        <li class="mb-3">Customized Workforce Solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">"We’re not just staffing shifts—we’re sustaining healthcare delivery."</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ Start National Coverage Area ============ -->
+<section class="national-coverage-area py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class=" title-text">National Coverage</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="coverage-card p-4 bg-white rounded shadow">
+                    <h4 class="mb-4 ">Our Reach</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">Active in all 50 states</li>
+                        <li class="mb-3">Regional sourcing & support</li>
+                        <li class="mb-3">Remote recruiters nationwide</li>
+                        <li class="mb-3">Digital, scalable deployment model</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="coverage-card p-4 bg-white rounded shadow">
+                    <h4 class="mb-4 ">Clients We Support</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">Federal & State Healthcare Systems</li>
+                        <li class="mb-3">National Health Networks</li>
+                        <li class="mb-3">Tribal & Behavioral Health Facilities</li>
+                        <li class="mb-3">Long-Term Care Organizations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="coverage-card p-4 bg-white rounded shadow">
+                    <h4 class="mb-4 ">Results That Matter</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">95%+ Client Retention Rate</li>
+                        <li class="mb-3">48-Hour Average Fill Time</li>
+                        <li class="mb-3">100% Credentialing Compliance</li>
+                        <li class="mb-3">Scaled COVID-19 & Emergency Deployments</li>
+                        <li class="mb-3">Veteran & DEI Hiring Priorities</li>
+                        <li class="mb-3">Rural & Underserved Area Expansion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.why-card, .coverage-card {
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.why-card:hover, .coverage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.why-card h4, .coverage-card h4 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.why-card ul, .coverage-card ul {
+    padding-left: 20px;
+}
+
+.why-card li, .coverage-card li {
+    font-size: 1rem;
+    color: #666;
+}
+</style>
+
 <!---============= Start Services Area =============--->
 <section class="service-area section">
   <div class="container">
